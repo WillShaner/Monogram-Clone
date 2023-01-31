@@ -24,9 +24,9 @@ A clone of Monogram's landing page with price converter and side menu
 ## Development
 ### Tech Stack
   For this project I used...
-    - HTML5
-    - CSS3
-    - Javascript
+   - HTML5
+   - CSS3
+   - Javascript
 ### What I learned
   This project was a chance to practice side modals for smaller screen compared to dropdown menus. I needed a way to keep the user from scrolling once the modal was opened and I did this by added a height of 100vh and overflow hidden to the body once the modal was opened.
   ```javascript
