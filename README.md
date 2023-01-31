@@ -18,9 +18,8 @@ A clone of Monogram's landing page with price converter and side menu
 ![App Screenshot](./monogram-clone-2.png)
 
 
-
 ### Links
-  * [Live Site](https://dynamic-travesseiro-58dba1.netlify.app/)
+  * [Live Site](https://willshaner.github.io/Monogram-Clone/)
 
 ## Development
 ### Tech Stack
