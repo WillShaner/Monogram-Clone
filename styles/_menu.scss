@@ -1,0 +1,57 @@
+.menu {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0%;
+  z-index: 1000000;
+  transform: translateX(-100%);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: block;
+  transition: 250ms ease-in-out;
+
+  &-backdrop {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.25);
+    z-index: 10;
+  }
+
+  &-content {
+    @extend .nav-menu;
+    position: absolute;
+    list-style: none;
+    padding-top: 5%;
+    top: 0;
+    width: 60%;
+    height: 100%;
+    background-color: $blue;
+    z-index: 10000;
+
+    li {
+      @include nav-link();
+
+      &:not(:first-child) {
+        padding: 6vw 20%;
+        margin-left: 3em;
+      }
+
+      &:last-child {
+        font-weight: 800;
+      }
+    }
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2em;
+
+      &-close {
+        padding: 0 1em;
+        font-size: 1.08em;
+      }
+    }
+
+  }
+
+}

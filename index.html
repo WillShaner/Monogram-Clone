@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monogram Store Clone</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/animations.css">
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class='logo'>
+        <div class="logo-img">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path
+              d="M256 80C149.9 80 62.4 159.4 49.6 262c9.4-3.8 19.6-6 30.4-6c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48c-44.2 0-80-35.8-80-80V384 336 288C0 146.6 114.6 32 256 32s256 114.6 256 256v48 48 16c0 44.2-35.8 80-80 80c-26.5 0-48-21.5-48-48V304c0-26.5 21.5-48 48-48c10.8 0 21 2.1 30.4 6C449.6 159.4 362.1 80 256 80z" />
+          </svg>
+        </div>
+        <p>
+          MONOGRAM
+        </p>
+      </div>
+      <!-- small nav -->
+      <ul class="nav-menu sm">
+        <li class="nav-img" onclick="menuOpen()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+          </svg></li>
+          <li class="nav-img">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64v48H160V112zm-48 48H48c-26.5 0-48 21.5-48 48V416c0 53 43 96 96 96H352c53 0 96-43 96-96V208c0-26.5-21.5-48-48-48H336V112C336 50.1 285.9 0 224 0S112 50.1 112 112v48zm24 96c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24zm200-24c0 13.3-10.7 24-24 24s-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24z" />
+          </svg></li>
+         
+        <li><div class="price-covnverter"><p onclick="openPriceConverter()" class="price-converter-toggle small-toggle">$</p><ul class="price-converter-dropdown d-none"> 
+          <li onclick="changeCurrency('USD', '$')" id="USD">USD ($)</li>
+          <li onclick="changeCurrency('CAD', '$')" id="CAD">CAD ($)</li>
+          <li onclick="changeCurrency('EUR', '€')" id="EUR">EUR (€)</li>
+          <li onclick="changeCurrency('AUD', '$')" id="AUD">AUD ($)</li>
+          <li onclick="changeCurrency('GBP', '£')" id="GBP">GBP (£)</li>
+          <li onclick="changeCurrency('KRW', '₩')" id="KRW">KRW (₩)</li>
+          <li onclick="changeCurrency('JPY', '¥')" id="JPY">JPY (¥)</li></ul></div></li>
+      </ul>
+      <!-- large nav -->
+      <ul class="nav-menu lg">
+        <li>HOW IT WORKS</li>
+        <li>WORKFLOWS</li>
+        <li>DOWNLOAD</li>
+        <li>BLOG</li>
+        <li>SUPPORT</li>
+        <li>SHOP</li>
+        <li class="logo-img"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <path
+              d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64v48H160V112zm-48 48H48c-26.5 0-48 21.5-48 48V416c0 53 43 96 96 96H352c53 0 96-43 96-96V208c0-26.5-21.5-48-48-48H336V112C336 50.1 285.9 0 224 0S112 50.1 112 112v48zm24 96c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24zm200-24c0 13.3-10.7 24-24 24s-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24z" />
+          </svg></li>
+          <li><div class="price-covnverter"><p onclick="openPriceConverter()" class="price-converter-toggle large-toggle">USD</p><ul class="price-converter-dropdown d-none"> 
+            <li onclick="changeCurrency('USD', '$')" id="USD">USD ($)</li>
+            <li onclick="changeCurrency('CAD', '$')" id="CAD">CAD ($)</li>
+            <li onclick="changeCurrency('EUR', '€')" id="EUR">EUR (€)</li>
+            <li onclick="changeCurrency('AUD', '$')" id="AUD">AUD ($)</li>
+            <li onclick="changeCurrency('GBP', '£')" id="GBP">GBP (£)</li>
+            <li onclick="changeCurrency('KRW', '₩')" id="KRW">KRW (₩)</li>
+            <li onclick="changeCurrency('JPY', '¥')" id="JPY">JPY (¥)</li></ul></div></li>
+      </ul>
+    </nav>
+    <div class="sales-countdown d-none">
+      <p class="sales-countdown-text">Use code HOLIDAY15 for 15% off</p>
+      <p class="sales-countdown-close" onclick="closeCoupon()">x</p>
+    </div>
+    <div class="header-content">
+      <h1 class="header-content-title">GIFTS FOR PRODUCTIVITY</h1>
+      <div class="sales-coupon">
+        <div class="sales-image">
+          <p>HOLIDAY SALE</p>
+          <div class="sales-image-overlay">
+            <h2>15%<br /><span>
+                <h5>OFF</h5>
+              </span></h2>
+          </div>
+          <div class="sales-image-border"></div>
+        </div>
+        <p class="sales-coupon-middle">HOLIDAY SALES EVENT<br />USE CODE: HOLIDAY15</p>
+        <p class="sales-coupon-right">CODE: HOLIDAY15</p>
+      </div>
+
+      <div class="sales-countdown-main">
+        <h3 class="days"></h3>
+        <h3 class="hours"></h3>
+        <h3 class="minutes"></h3>
+        <h3 class="seconds"></h3>
+        <div>
+
+
+        </div>
+      </div>
+
+  </header>
+  <div class="menu">
+    <div class="menu-backdrop" onclick="menuClose()"></div>
+
+      <ul class="menu-content">
+        <li class='menu-content-header'>
+          <div class='logo'>
+            <div class="logo-img">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M256 80C149.9 80 62.4 159.4 49.6 262c9.4-3.8 19.6-6 30.4-6c26.5 0 48 21.5 48 48V432c0 26.5-21.5 48-48 48c-44.2 0-80-35.8-80-80V384 336 288C0 146.6 114.6 32 256 32s256 114.6 256 256v48 48 16c0 44.2-35.8 80-80 80c-26.5 0-48-21.5-48-48V304c0-26.5 21.5-48 48-48c10.8 0 21 2.1 30.4 6C449.6 159.4 362.1 80 256 80z" />
+              </svg>
+            </div>
+            <p>
+              MONOGRAM
+            </p>
+          </div>
+          <p class="menu-content-header-close" onclick="menuClose()">x</p>
+        </li>
+        <li>HOW IT WORKS</li>
+        <li>WORKFLOWS</li>
+        <li>DOWNLOAD</li>
+        <li>BLOG</li>
+        <li>SUPPORT</li>
+        <li>SHOP</li>c
+      </ul>
+  </div>
+  <main class="store-container">
+    <!-- image 1 -->
+    <div class="store-container-product">
+      <img class="store-container-product-img" src="./images/store-images/image-1.jpg" alt="product" />
+      <p class="image-label order">Pre-order</p>
+      <div class="store-container-product-text">
+        <div class="store-container-product-row">
+          <p class="product-title">bluetooth</p>
+          <p class="product-price" aria-valuenow=499 >$499</p>
+          <button type='button' class="shop-now-btn">Shop Now</button>
+        </div>
+        <p class="product-info">Ideal for music & audio. Adaptable to any workflow</p>
+      </div>
+    </div>
+    <!-- image 2 -->
+    <div class="store-container-product">
+      <img class="store-container-img" src="./images/store-images/image-2.jpg" alt="product" />
+      <p class="image-label in-stock">in stock</p>
+    <div class="store-container-product-text">
+      <div class="store-container-product-row">
+        <p class="product-title">Wired</p>
+        <p class="product-price" aria-valuenow=99 >$99</p>
+        <button type='button' class="shop-now-btn">Shop Now</button>
+      </div>
+      <p class="product-info">Ideal for music & audio. Adaptable to any workflow</p>
+    </div>
+  </div>
+  <!-- image 3 -->
+  <div class="store-container-product">
+    <img class="store-container-img" src="./images/store-images/image-3.jpg" alt="product" />
+    <p class="image-label in-stock">in stock</p>
+    <div class="store-container-product-text">
+      <div class="store-container-product-row">
+        <p class="product-title">master</p>
+        <p class="product-price" aria-valuenow=395 >$395</p>
+        <button type='button' class="shop-now-btn">Shop Now</button>
+      </div>
+      <p class="product-info">Ideal for music & audio. Adaptable to any workflow</p>
+    </div>
+  </div>
+  <!-- image 4 -->
+  <div class="store-container-product">
+    <img class="store-container-img" src="./images/store-images/image-4.jpg" alt="product" />
+    <p class="image-label new">new</p>
+    <div class="store-container-product-text">
+      <div class="store-container-product-row">
+        <p class="product-title">workout</p>
+        <p class="product-price" aria-valuenow=49 >$49</p>
+        <button type='button' class="shop-now-btn">Shop Now</button>
+      </div>
+      <p class="product-info">Ideal for music & audio. Adaptable to any workflow</p>
+    </div>
+  </div>
+  <!-- store divider -->
+  <div class="store-container-divider">
+    <h3>Create your</br>own console</h3>
+    <h4>Add-on to make it perfect</h4>
+  </div>
+  <!-- image 5 -->
+  <div class="store-container-product">
+    <img class="store-container-img" src="./images/store-images/image-5.jpg" alt="product" />
+    <p class="image-label in-stock">in stock</p>
+    <div class="store-container-product-text">
+      <div class="store-container-product-row">
+        <p class="product-title">running</p>
+        <p class="product-price" aria-valuenow='259' >$259</p>
+        <button type='button' class="shop-now-btn">Shop Now</button>
+      </div>
+      <p class="product-info">Ideal for music & audio. Adaptable to any workflow</p>
+    </div>
+  </div>
+  <!-- image 6 -->
+  <div class="store-container-product">
+    <img class="store-container-img" src="./images/store-images/image-6.jpg" alt="product" />
+    <p class="image-label order">Pre-order</p>
+    <div class="store-container-product-text">
+      <div class="store-container-product-row">
+        <p class="product-title">noise-cancelling</p>
+        <p class="product-price" aria-valuenow=199 >$199</p>
+        <button type='button' class="shop-now-btn">Shop Now</button>
+      </div>
+      <p class="product-info">Ideal for music & audio. Adaptable to any workflow</p>
+    </div>
+  </div>
+  </main>
+  <footer>
+    <!-- subscription -->
+    <div class="footer-column footer-sub">
+      <h5>Subscribe to monogram</h5>
+      <p>Master productivity with Creative Console and get all the latest Monogram news</p>
+      <form class="footer-row mock-email">
+      <input type="email" placeholder="Email Address"/>
+      <button type="submit" class="email-submit">SUBMIT</button>
+      </form>
+      <div class="footer-row">
+        <img src="../images/social-icons/instagram.svg">
+        <img src="../images/social-icons/facebook.svg">
+        <img src="../images/social-icons/twitter.svg">
+        <img src="../images/social-icons/youtube.svg">
+      </div>
+      <p class="copywrite-md">&copy; Monogram 2023</p>
+
+    </div>
+    <!-- monogram -->
+    <div class="footer-column monogram">
+      <h5>monogram</h5>
+      <p>305 King St. W.</br>Suite 502</br>Kitchener, ON</br>Canada</p>
+    </div>
+    <!-- quick links-->
+    <div class="footer-column quick-links">
+      <h5>Quick links</h5>
+      <a class='footer-link' href="#">Home</a>
+      <a class='footer-link' href="#">How it Works</a>
+      <a class='footer-link' href="#">Shop</a>
+      <a class='footer-link' href="#">Download</a>
+    </div>
+    <!-- help -->
+    <div class="footer-column help">
+      <h5>Help</h5>
+      <a class='footer-link' href="#">FAQs</a>
+      <a class='footer-link' href="#">Support Center</a>
+      <a class='footer-link' href="#">Shipping and Sales</a>
+    </div>
+    <!-- information -->
+    <div class="footer-column information">
+      <h5>Information</h5>
+      <a class='footer-link' href="#">About Us</a>
+      <a class='footer-link' href="#">Work with us</a>
+      <a class='footer-link' href="#">Privacy Policy</a>
+      <a class='footer-link' href="#">Terms of Use</a>
+      <a class='footer-link' href="#">Terms of Sale</a>
+      <a class='footer-link' href="#">Press Kit</a>
+    </div>
+    <p class="copywrite-sm">&copy; Monogram 2023</p>
+
+  </footer>
+  <script defer src="./script.js"></script>
+</body>
+
+</html>

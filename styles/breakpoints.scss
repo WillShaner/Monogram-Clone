@@ -1,0 +1,9 @@
+@media screen and (max-width: 768px) {
+  .sales-coupon:nth-child(odd) {
+    display: none;
+  }
+}
+
+.sales-coupon {
+  display: none;
+}

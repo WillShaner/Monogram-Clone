@@ -1,0 +1,164 @@
+footer {
+  background-color: $blue;
+  color: $light-orange;
+  padding: 3em;
+  display: flex;
+  flex-wrap: wrap;
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    width: 50%;
+
+    h5 {
+      font-weight: 600;
+      font-size: 1.05em;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      min-width: 6em;
+    }
+
+    form {
+      font-size: 30px;
+      margin: 0.75rem 0;
+
+      input[type='email'] {
+        background-color: $blue;
+        outline-offset: none;
+        border: 1px solid $light-orange;
+        font-size: 0.9rem;
+        background-clip: padding-box;
+        padding: 0.5rem 0.95rem;
+        font-weight: 300;
+        height: 40px;
+
+        &::placeholder {
+          color: rgb(166, 175, 185);
+        }
+      }
+
+      button {
+        background-color: $light-orange;
+        border: 1px solid $light-orange;
+        border-radius: 50rem;
+        opacity: 0.65;
+        letter-spacing: 1px;
+        font-size: 1rem;
+        margin-left: 0.5rem;
+        cursor: pointer;
+        padding: 0.75rem 1.75rem;
+        font-weight: 700;
+        color: $blue;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+
+
+
+    a {
+      color: $light-orange;
+      margin-bottom: 0.4em;
+      text-decoration: none;
+      transition: 150ms ease-in-out;
+
+      &:hover {
+        color: $orange;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .footer-sub {
+    height: min-content;
+    width: 100%;
+
+
+  }
+
+  .copywrite-md {
+    display: none;
+  }
+
+  .footer-row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+    margin: 0.5rem;
+
+
+    img {
+      height: 30px;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+/* Order for different screen sizes */
+
+.monogram {
+  order: 2;
+}
+
+.footer-sub {
+  order: 1;
+}
+
+.quick-links {
+  order: 3;
+}
+
+.help {
+  order: 4;
+}
+
+.information {
+  order: 5
+}
+
+.copywrite-sm {
+  order: 6;
+}
+
+@media screen and (min-width: 678px) {
+  .footer-column {
+    flex-basis: 33.223%;
+  }
+
+  .footer-sub {
+    flex-basis: 66.667%;
+    order: 2;
+
+
+  }
+
+  footer .copywrite-md {
+    display: block;
+  }
+
+  .monogram {
+    order: 1;
+  }
+
+  .copywrite-sm {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .footer-sub {
+    order: 7;
+    flex-basis: 32%;
+    max-width: 32%;
+  }
+
+  .footer-column {
+    flex-basis: 16%;
+    max-width: 16%;
+  }
+}
