@@ -54,7 +54,8 @@ const openPriceConverter = () => {
 const currencies = [
   {
     name: 'USD',
-    symbol: '$'
+    symbol: '$',
+    conversion: 1
   },
   {
     name: 'CAD',
