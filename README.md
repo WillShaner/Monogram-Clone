@@ -3,9 +3,9 @@
 A clone of Monogram's landing page with price converter and side menu
 
 ## Table of Contents
-  * [Overview](https://github.com/WillShaner/Monogram-Clone/new/main?readme=1#overview)
-  * [Development](https://github.com/WillShaner/Monogram-Clone/new/main?readme=1#development)
-  * [Author](https://github.com/WillShaner/Monogram-Clone/new/main?readme=1#author)
+  * [Overview](https://github.com/WillShaner/Monogram-Clone/edit/main/README.md#Overview)
+  * [Development](https://github.com/WillShaner/Monogram-Clone/edit/main/README.md#Development)
+  * [Author](https://github.com/WillShaner/Monogram-Clone/edit/main/README.md#Author)
   
   
   
@@ -14,7 +14,9 @@ A clone of Monogram's landing page with price converter and side menu
   
 ### Screenshots
 
-![App Screenshot]
+![App Screenshot](./monogram-clone-1.png)
+![App Screenshot](./monogram-clone-2.png)
+
 
 
 ### Links
