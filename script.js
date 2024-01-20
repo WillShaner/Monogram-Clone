@@ -8,7 +8,7 @@ const priceConverter = document.querySelector('.price-converter-dropdown');
 const mockEmail = document.querySelector('.mock-email')
 
 const countdown = () => {
-  const countDate = new Date('June 25, 2023 00:00:00').getTime();
+  const countDate = new Date('December 25, 2024 00:00:00').getTime();
   const now = new Date().getTime();
   const diff = countDate - now;
 
